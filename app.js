@@ -1,21 +1,42 @@
-const a = document.querySelector("h1");
+const h1 = document.querySelector("h1");
 
 function clickTitle() {
-    if(a.style.color === "blue"){
-        a.style.color = "black";
+    if(h1.style.color === "blue"){
+        h1.style.color = "black";
     }else{
-        a.style.color = "blue";
+        h1.style.color = "blue";
     }
 }
 
 function mouseEnter() {
-    a.innerText = "mouse is here!"
+    h1.innerText = "mouse is here!"
 }
 
 function mouseLeave() {
-    a.innerText = "mouse is gone!"
+    h1.innerText = "mouse is gone!"
 }
 
-a.addEventListener("click", clickTitle);
-a.addEventListener("mouseenter", mouseEnter);
-a.addEventListener("mouseleave", mouseLeave);
+function windowResize() {
+    document.body.style.backgroundColor = "tomato";
+}
+
+function windowCopy() {
+    alert("copier!");
+}
+
+function windowOffline() {
+    alert("WiFi offline!");
+}
+
+function windowOnline() {
+    alert("WiFi connected");
+}
+
+h1.addEventListener("click", clickTitle);
+h1.addEventListener("mouseenter", mouseEnter);
+h1.addEventListener("mouseleave", mouseLeave);
+
+window.addEventListener("resize", windowResize);
+window.addEventListener("copy", windowCopy);
+window.addEventListener("offline", windowOffline);
+window.addEventListener("online", windowOnline);
