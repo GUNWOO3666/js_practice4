@@ -8,4 +8,14 @@ function clickTitle() {
     }
 }
 
+function mouseEnter() {
+    a.innerText = "mouse is here!"
+}
+
+function mouseLeave() {
+    a.innerText = "mouse is gone!"
+}
+
 a.addEventListener("click", clickTitle);
+a.addEventListener("mouseenter", mouseEnter);
+a.addEventListener("mouseleave", mouseLeave);
